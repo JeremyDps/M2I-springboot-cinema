@@ -17,7 +17,4 @@ public class Film {
     private String nom;
     private Integer duree;
 
-    @DBRef
-    @Field("cinema")
-    private Cinema cinema;
 }

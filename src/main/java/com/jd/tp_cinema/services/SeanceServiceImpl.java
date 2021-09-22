@@ -50,7 +50,7 @@ public class SeanceServiceImpl implements SeanceService {
         Optional<Seance> seance = this.seanceRepository.findById(id);
 
         res.put("Commande", seance.get().getId());
-        res.put("Cinéma", seance.get().getFilm().getCinema().getNom());
+        res.put("Cinéma", seance.get().getSalle().getCinema().getNom());
         res.put("Film", seance.get().getFilm().getNom());
         res.put("Date de début", seance.get().getDate());
         res.put("Salle", seance.get().getSalle().getNumero());
